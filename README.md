@@ -57,6 +57,56 @@ A single-page React application that allows users to track their personal income
    npm run build
    ```
 
+## Deployment to Netlify
+
+### Option 1: Deploy via Netlify UI
+
+1. Create a Netlify account at [https://app.netlify.com/](https://app.netlify.com/)
+2. Click the "New site from Git" button
+3. Select your Git provider (GitHub, GitLab, or Bitbucket)
+4. Authorize Netlify and select your repository
+5. Configure the build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+6. Click "Deploy site"
+
+### Option 2: Deploy using Netlify CLI
+
+1. Install the Netlify CLI globally:
+   ```
+   npm install -g netlify-cli
+   ```
+2. Build your project:
+   ```
+   npm run build
+   ```
+3. Login to Netlify:
+   ```
+   netlify login
+   ```
+4. Initialize your site:
+   ```
+   netlify init
+   ```
+5. Deploy your site:
+   ```
+   netlify deploy --prod
+   ```
+
+### Environment Variables
+
+Make sure to add your Firebase configuration as environment variables in Netlify:
+
+1. Go to Site settings > Build & deploy > Environment
+2. Add the following variables:
+   - VITE_FIREBASE_API_KEY
+   - VITE_FIREBASE_AUTH_DOMAIN
+   - VITE_FIREBASE_PROJECT_ID
+   - VITE_FIREBASE_STORAGE_BUCKET
+   - VITE_FIREBASE_MESSAGING_SENDER_ID
+   - VITE_FIREBASE_APP_ID
+   - VITE_FIREBASE_MEASUREMENT_ID (if applicable)
+
 ## Usage
 
 1. **Adding Transactions**:

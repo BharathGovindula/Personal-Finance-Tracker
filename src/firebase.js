@@ -6,13 +6,13 @@ import { getAuth, signInAnonymously } from 'firebase/auth';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyBtOFhFL51mAPB3uSbAZ0l910o6kr9Ad9A",
-  authDomain: "personal-finance-tracker-92e3c.firebaseapp.com",
-  projectId: "personal-finance-tracker-92e3c",
-  storageBucket: "personal-finance-tracker-92e3c.firebasestorage.app",
-  messagingSenderId: "949661966584",
-  appId: "1:949661966584:web:f28a67b05aac18b2e71b0d",
-  measurementId: "G-ZD29JR2NEX"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyBtOFhFL51mAPB3uSbAZ0l910o6kr9Ad9A",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "personal-finance-tracker-92e3c.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "personal-finance-tracker-92e3c",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "personal-finance-tracker-92e3c.firebasestorage.app",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "949661966584",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:949661966584:web:f28a67b05aac18b2e71b0d",
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-ZD29JR2NEX"
 };
 
 // Initialize Firebase
