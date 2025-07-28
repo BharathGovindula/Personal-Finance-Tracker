@@ -32,7 +32,7 @@ A single-page React application that allows users to track their personal income
 
 1. Clone the repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/BharathGovindula/Personal-Finance-Tracker.git
    cd personal-finance-tracker
    ```
 
